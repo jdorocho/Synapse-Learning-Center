@@ -1,0 +1,490 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+    font-size: 62.5%;
+    /* min-height: 100%; */
+    margin: 0;
+    /* position: relative; */
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+    color: #0f5a7f;
+}
+
+h1 {
+    font-size: 5.4rem;
+}
+
+h2, h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+h2 {
+    margin-top: 85px;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+p {
+    color: #5b5b5b;
+}
+
+a {
+    color: #155b7e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EE5222;
+}
+
+header {
+    background-image: linear-gradient(to right, #dfe8f3, #f3f2f9);
+}
+
+.topNav {
+    width: 100%;
+    /* border: 2px solid goldenrod; */
+    padding: 15px 0px;
+    position: fixed;
+}
+
+.scrolled {
+    /* background-image: radial-gradient(rgba(119, 119, 119, 0.3) 5%, rgba(170, 170, 170, 0.3) 95%) !important; */
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1; 
+    box-shadow: 0 4px 2px -1px #ddd;
+}
+
+.topNav p {
+    color: #0f5a7f;
+    font-size: 1.6rem;
+}
+
+.schedDemo {
+    color: #fff;
+    font-size: 1.4rem;
+    background-color: #EE5222;
+    padding: 18px 47px;
+    border-style: none;
+    transition: all 0.3s ease;
+}
+
+.schedDemo:hover {
+    background-color: #0f5a7f;
+}
+
+.wrapperNav {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoContainerTop {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 180px;
+}
+
+.learningNav:hover {
+    color: #EE5222;
+}
+
+.navRight {
+    display: flex;
+}
+
+.signIn {
+    margin-right: 15px;
+    /* border: 1px dotted pink; */
+    padding: 17px 15px;
+    transition: all 0.3s ease;
+}
+
+.signIn:hover p {
+    color: #fff;
+}
+
+.signIn:hover {
+    font-size: 1.4rem;
+    background-color: #EE5222;
+}
+
+.searchGreeting {
+    padding: 190px 0px 95px 0px;
+}
+
+.search {
+    position: relative;
+}
+
+.search .fa-search { 
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    color: #5b5b5b;
+    font-size: 15px;
+}
+
+.search input {
+    margin-top: 24px;
+    width: 75%;
+    padding: 20px;
+    border-radius: 5px;
+    border-style: none;
+    text-indent: 30px;
+}
+
+.accessSupportContainer {
+    /* border: 2px dashed magenta; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+}
+
+.accessSupport {
+    box-shadow: 0px 0px 10px #ccc;
+    width: calc((100% / 3) - 25px);
+    text-align: center;
+    padding: 35px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    max-height: 165px;
+    transition: all 0.3s ease;
+}
+
+.accessSupport h3 {
+    color: #0f5a7f;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.accessSupport i {
+    color: #0f5a7f;
+}
+
+.accessSupport:hover {
+    color: #fff;
+    background-color: #0f5a7f;
+}
+
+.accessSupport:hover h3 {
+    color: #fff;
+}
+
+.far, .fas {
+    color: #5b5b5b;
+    font-size: 3.0rem;
+}
+
+.fa-phone {
+    color: #5b5b5b;
+    margin-right: 10px;
+    font-size: 2.0rem;
+}
+
+.accessSupport:hover {
+    cursor: pointer;
+}
+
+.accessSupport:hover i, .accessSupport:hover h3 {
+    display: none;
+}
+
+.accessHoverText {
+    display: none;
+}
+
+.accessSupport:hover .accessHoverText {
+    display: block;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.accessSupport:hover .accessHoverText a {
+    color: #fff;
+}
+
+.accessSupport:hover .learningCenterSmall {
+    font-size: 1.5rem;
+}
+
+.callBlurb {
+    margin-top: 35px;
+}
+
+.mainCardsContainer {
+    /* border: 2px solid cornflowerblue; */
+    display: flex;
+    margin-top: 85px;
+}
+
+.mainCard {
+    /* border: 2px dotted pink; */
+    background-color: #f5f8fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 85px;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.mainCardOuter {
+    width: calc(100% / 3);
+}
+
+.mainCard:hover {
+    transform: scale(1.10);
+    box-shadow: 0px 0px 10px #ccc;
+    border: none;
+}
+
+.mainCard i {
+    font-size: 6.0rem;
+    color: #0f5a7f;
+}
+
+.mainCard p {
+    margin-top: 15px;
+}
+
+.mainCardOuter2 {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.mainCard h2 {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 3.0rem;
+}
+
+.featuredArticles ul {
+    list-style: none;
+    display: flex;
+    /* border: 1px solid greenyellow; */
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.featuredArticles li {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.featuredArticles p {
+    font-size: 1.8rem;
+}
+
+.featuredArticles p:hover {
+    color: #EE5222;
+}
+
+.fa-star {
+    color: #EE5222;
+    margin-right: 10px;
+    /* font-size: 30px; */
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid gold; */
+    align-items: center;
+    margin-top: 35px;
+}
+
+.productTopHalf, .productBottomHalf {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px dotted pink; */
+    width: calc(100% / 3);
+}
+
+.productBottomHalf {
+    margin-top: 30px;
+}
+
+.productBox {
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 20px; 
+    padding: 50px;
+    width: 185px;
+    height: 185px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.productBox:hover {
+    transform: scale(1.10);
+}
+
+.bPTContainer {
+    margin-top: 35px;
+    /* border: 2px solid peru; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.bPTBox {
+    /* border: 2px dotted pink; */
+    /* width: calc((100% / 2) - 15px); */
+    display: flex;
+    align-items: center;
+    padding: 35px;
+}
+
+.bPTOuter {
+    width: calc((100% / 2) - 15px);
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.bPTOuter:hover {
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+.bPTBox h3 {
+    text-align: left;
+}
+
+.bPTBox p {
+    margin-top: 10px;
+}
+
+.bPTBox i {
+    color: #3b77de;
+    font-size: 4.0rem;
+}
+
+
+.bPTText {
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #f5f8fa;
+    padding: 95px 0px;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* flex-shrink: 0; */
+    margin-top: 85px;
+    /* overflow: hidden; */
+    align-self: stretch;
+    height: 435px;
+    /* I originally tried to avoid a fixed footer height by setting absolute positioning to make the footer stick, but it sat on top of the main content upon resizing  */
+}
+
+footer ul {
+    list-style: none;
+    /* border: 3px dotted salmon; */
+}
+
+footer li p:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 25px;
+}
+
+.footerListTitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.footerListTitle:hover {
+    text-decoration: none;
+}
+
+.contactHolder {
+    /* border: 1px solid purple; */
+    padding-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.contactHolder i {
+    color: #3b77de;
+}
+
+.contactHolder i:hover {
+    color: #EE5222;
+}
+
+.copyright {
+    display: flex;
+    border-top: 1px solid #ccc;
+    /* padding-bottom: 45px; */
+    margin-top: 75px;
+    padding-top: 35px;
+    justify-content: space-between;
+}
+
+.bottomCopyText {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+}
+
+.termBox p {
+    margin-top: 0px;
+}
+
+.termClickable p:hover {
+    color: #EE5222;
+}
