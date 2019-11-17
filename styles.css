@@ -8,16 +8,13 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-* {
-    /* border: 3px solid goldenrod; */
-}
+/* * {
+    border: 3px solid goldenrod;
+} */
 
 html {
     font-size: 62.5%;
-    /* min-height: 100%; */
     margin: 0;
-    /* position: relative; */
-    /* border: 3px solid sandybrown; */
 }
 
 .wrapper {
@@ -77,16 +74,8 @@ header {
 
 .topNav {
     width: 100%;
-    /* border: 2px solid goldenrod; */
     padding: 15px 0px;
     position: fixed;
-}
-
-.scrolled {
-    /* background-image: radial-gradient(rgba(119, 119, 119, 0.3) 5%, rgba(170, 170, 170, 0.3) 95%) !important; */
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1; 
-    box-shadow: 0 4px 2px -1px #ddd;
 }
 
 .topNav p {
@@ -95,12 +84,15 @@ header {
 }
 
 .schedDemo {
-    color: #fff;
-    font-size: 1.4rem;
     background-color: #EE5222;
     padding: 18px 47px;
     border-style: none;
     transition: all 0.3s ease;
+}
+
+.schedDemo p {
+    color: #fff;
+    font-size: 1.4rem;
 }
 
 .schedDemo:hover {
@@ -130,13 +122,8 @@ header {
     color: #EE5222;
 }
 
-.navRight {
-    display: flex;
-}
-
 .signIn {
     margin-right: 15px;
-    /* border: 1px dotted pink; */
     padding: 17px 15px;
     transition: all 0.3s ease;
 }
@@ -148,6 +135,55 @@ header {
 .signIn:hover {
     font-size: 1.4rem;
     background-color: #EE5222;
+}
+
+.hamburger,
+.exitResponsive {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-style: none;
+    width: 50px;
+    background-color: #f3f2f9;
+}
+
+.scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1; 
+    box-shadow: 0 4px 2px -1px #ddd;
+}
+
+.borderless {
+    box-shadow: none;
+}
+
+.scrolledBurger {
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.scrolledExit {
+    background-color: #fff;
+}
+
+.exitResponsive i, .hamburger i {
+    color: #3b77de;
+}
+
+.fa-bars, .fa-times {
+    cursor: pointer;
+}
+
+.fa-bars:hover, .fa-times:hover {
+    color: #EE5222;
+}
+
+.show.menu {
+    display: block;
+}
+
+.headerNav {
+    display: flex;
 }
 
 .searchGreeting {
@@ -176,7 +212,6 @@ header {
 }
 
 .accessSupportContainer {
-    /* border: 2px dashed magenta; */
     display: flex;
     justify-content: space-around;
     margin-top: 35px;
@@ -260,13 +295,11 @@ header {
 }
 
 .mainCardsContainer {
-    /* border: 2px solid cornflowerblue; */
     display: flex;
     margin-top: 85px;
 }
 
 .mainCard {
-    /* border: 2px dotted pink; */
     background-color: #f5f8fa;
     display: flex;
     flex-direction: column;
@@ -312,7 +345,6 @@ header {
 .featuredArticles ul {
     list-style: none;
     display: flex;
-    /* border: 1px solid greenyellow; */
     justify-content: space-evenly;
     margin-top: 20px;
 }
@@ -334,13 +366,11 @@ header {
 .fa-star {
     color: #EE5222;
     margin-right: 10px;
-    /* font-size: 30px; */
 }
 
 .productContainer {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid gold; */
     align-items: center;
     margin-top: 35px;
 }
@@ -348,7 +378,6 @@ header {
 .productTopHalf, .productBottomHalf {
     display: flex;
     justify-content: space-between;
-    /* border: 2px dotted pink; */
     width: calc(100% / 3);
     min-width: 400px;
 }
@@ -377,17 +406,15 @@ header {
 
 .bPTContainer {
     margin-top: 35px;
-    /* border: 2px solid peru; */
     display: flex;
     justify-content: space-between;
 }
 
 .bPTBox {
-    /* border: 2px dotted pink; */
-    /* width: calc((100% / 2) - 15px); */
     display: flex;
     align-items: center;
     padding: 35px;
+    height: 100%;
 }
 
 .bPTOuter {
@@ -402,6 +429,7 @@ header {
 
 .bPTBox h3 {
     text-align: left;
+    margin-top: 0px;
 }
 
 .bPTBox p {
@@ -421,12 +449,7 @@ header {
 footer {
     background-color: #f5f8fa;
     padding: 95px 0px;
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* width: 100%; */
-    /* flex-shrink: 0; */
     margin-top: 85px;
-    /* overflow: hidden; */
     align-self: stretch;
     height: 435px;
     /* I originally tried to avoid a fixed footer height by setting absolute positioning to make the footer stick, but it sat on top of the main content upon resizing  */
@@ -434,7 +457,6 @@ footer {
 
 footer ul {
     list-style: none;
-    /* border: 3px dotted salmon; */
 }
 
 footer li p:hover {
@@ -456,7 +478,6 @@ footer p {
 }
 
 .contactHolder {
-    /* border: 1px solid purple; */
     padding-top: 10px;
     display: flex;
     align-items: flex-start;
@@ -475,7 +496,6 @@ footer p {
 .copyright {
     display: flex;
     border-top: 1px solid #ccc;
-    /* padding-bottom: 45px; */
     margin-top: 75px;
     padding-top: 35px;
     justify-content: space-between;
@@ -498,7 +518,6 @@ footer p {
 @media (max-width: 1190px) {
     .mainCardsContainer {
         flex-direction: column;
-        /* border: 2px dotted black; */
         align-items: center;
         padding: 0px;
     }
@@ -529,7 +548,6 @@ footer p {
     }    
 
     .featuredArticles {
-        /* border: 2px solid darkcyan; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -541,8 +559,59 @@ footer p {
 }
 
 @media (max-width: 810px) {
-    .topLine, .learningNav, .schedDemo {
+    .topLine, .learningNav {
         display: none;
+    }
+
+    .hamburger,
+	.exitResponsive {
+		display: block;
+        font-size: 25px;
+    }
+    
+    .menu {
+        display: none;
+        width: 500px;
+    }
+
+	.headerNav {
+		flex-direction: column;
+        padding: 0px 0px 25px 0px;
+        position: absolute;
+        width: 100%;
+        top: 76.5px;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #fff;
+    }
+
+    .signIn {
+        margin-right: 0px;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+
+    .schedDemo {
+        padding: 17px 15px;
+        background-color: transparent;
+        margin-left: 50px;
+    }
+
+    .signIn:hover, .schedDemo:hover {
+        background-color: transparent;
+    }
+
+    .signIn p, .schedDemo p {
+        color: #0f5a7f;
+        font-size: 1.6rem;
+    }
+
+    .signIn:hover p {
+        color: #EE5222;
+    }
+
+    .signIn p:hover, .schedDemo p:hover {
+        color: #EE5222;
     }
 
     h1 {
@@ -551,7 +620,6 @@ footer p {
     
     .accessSupportContainer {
         flex-direction: column;
-        /* border: 1px solid hotpink; */
         align-items: center;
     }
 
@@ -562,7 +630,6 @@ footer p {
 
     .bPTContainer {
         flex-direction: column;
-        /* border: 2px solid aqua; */
         align-items: center;
     }
 
@@ -590,10 +657,6 @@ footer p {
 }
 
 @media (max-width: 610px) {
-    .signIn {
-        display: none;
-    }
-
     h1 {
         font-size: 3.8rem;
     }
@@ -605,10 +668,6 @@ footer p {
     .accessSupport {
         min-width: 284px;
     }
-
-    /* .mainCardsContainer {
-        border: 2px dotted salmon;
-    } */
 
     .callBlurb {
         font-size: 1.4rem;
@@ -630,7 +689,6 @@ footer p {
     .productTopHalf, .productBottomHalf {
         flex-direction: column;
         align-items: center;
-        /* border: 2px solid rebeccapurple; */
         min-width: 335px;
     }
 
