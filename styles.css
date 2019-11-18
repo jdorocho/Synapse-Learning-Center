@@ -182,8 +182,12 @@ header {
     display: block;
 }
 
-.headerNav {
+.headerNavHorizontal {
     display: flex;
+}
+
+.headerNavVertical {
+    display: none;
 }
 
 .searchGreeting {
@@ -567,7 +571,11 @@ footer p {
         display: block;
     }
 
-	.headerNav {
+    .headerNavHorizontal {
+        display: none;
+    }
+
+	.headerNavVertical {
         display: none;
         flex-direction: column;
         padding: 0px 0px 25px 0px;
@@ -703,9 +711,13 @@ footer p {
     }
 }
 
-/* This was my attempt in bringing back .headerNav when switching to a larger screen again, but it doesn't seem to be working.*/
+/* This was my attempt in removing .headerNavVertical and .exitResponsive when switching back to a larger screen again while the hamburger dropdown is still open, but it doesn't seem to be working.*/
 @media (min-width: 811px) {
-    .headerNav {
-        display: flex;
+    .headerNavVertical {
+        display: none;
+    }
+
+    .exitResponsive {
+        display: none;
     }
 }

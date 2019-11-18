@@ -2,7 +2,7 @@ $(document).ready(function(){
 // This allows the top navigation links to be visible via a hamburger menu when the screen is small enough, and for the menu to be dismissed upon clicking the x 
     $(function() {
         $('.hamburger').click(function() {
-            $('.headerNav').slideDown('slow');
+            $('.headerNavVertical').slideDown('slow');
             $('.topNav').addClass('borderless'); 
             $('.topNav').addClass('scrolled');
             $('.hamburger').removeClass('show');
@@ -11,13 +11,13 @@ $(document).ready(function(){
         });
 
         $('.exitResponsive').click(function() {
-            $('.headerNav').slideUp('slow');
+            $('.headerNavVertical').slideUp('slow');
             $('.exitResponsive').removeClass('show');
             $('.hamburger').addClass('show');
             $('.hamburger').addClass('scrolledBurger');
         });
     });
-// Got the headerNav to stop bouncing/acting strangely upon slideDown. Unfortunately, the headerNav is now gone when you switch back to a larger screen again. 
+// Known Bug: If you expand to a larger screen while the hamburger dropdown is still open, .exitResponsive and .headerNavVertical don't go away. Attempt to resolve using media query unsuccessful  
 
  // This is for the nav bar to change properties after scrolling past a certain point on the page
     $(function () {
