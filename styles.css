@@ -145,7 +145,7 @@ header {
     right: 20px;
     border-style: none;
     width: 50px;
-    background-color: #f3f2f9;
+    background-color: transparent;
 }
 
 .scrolled {
@@ -159,11 +159,11 @@ header {
 }
 
 .scrolledBurger {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: transparent;
 }
 
 .scrolledExit {
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .exitResponsive i, .hamburger i {
@@ -178,7 +178,7 @@ header {
     color: #EE5222;
 }
 
-.show.menu {
+.show.exitResponsive {
     display: block;
 }
 
@@ -563,19 +563,13 @@ footer p {
         display: none;
     }
 
-    .hamburger,
-	.exitResponsive {
-		display: block;
-        font-size: 25px;
-    }
-    
-    .menu {
-        display: none;
-        width: 500px;
+    .show.hamburger {
+        display: block;
     }
 
 	.headerNav {
-		flex-direction: column;
+        display: none;
+        flex-direction: column;
         padding: 0px 0px 25px 0px;
         position: absolute;
         width: 100%;
@@ -706,5 +700,12 @@ footer p {
 
     .bottomCopyText p {
         font-size: 1.0rem;
+    }
+}
+
+/* This was my attempt in bringing back .headerNav when switching to a larger screen again, but it doesn't seem to be working.*/
+@media (min-width: 811px) {
+    .headerNav {
+        display: flex;
     }
 }

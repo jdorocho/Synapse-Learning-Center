@@ -3,19 +3,21 @@ $(document).ready(function(){
     $(function() {
         $('.hamburger').click(function() {
             $('.headerNav').slideDown('slow');
-            $('.menu').addClass('show');
             $('.topNav').addClass('borderless'); 
             $('.topNav').addClass('scrolled');
-            $('.hamburger').addClass('scrolledBurger');
+            $('.hamburger').removeClass('show');
+            $('.exitResponsive').addClass('show');
             $('.exitResponsive').addClass('scrolledExit');
         });
 
         $('.exitResponsive').click(function() {
             $('.headerNav').slideUp('slow');
-            $('.menu').removeClass('show');
+            $('.exitResponsive').removeClass('show');
+            $('.hamburger').addClass('show');
+            $('.hamburger').addClass('scrolledBurger');
         });
     });
-// The slideUp() and slideDown() aren't working properly- sometimes it slides down very slowly, sometimes it bounces. Slide Up doesn't work at all, and just disappears. I suspect it's being impacted by the "show" class addition/removal on "menu".
+// Got the headerNav to stop bouncing/acting strangely upon slideDown. Unfortunately, the headerNav is now gone when you switch back to a larger screen again. 
 
  // This is for the nav bar to change properties after scrolling past a certain point on the page
     $(function () {
