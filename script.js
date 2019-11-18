@@ -17,7 +17,6 @@ $(document).ready(function(){
             $('.hamburger').addClass('scrolledBurger');
         });
     });
-// Known Bug: If you expand to a larger screen while the hamburger dropdown is still open, .exitResponsive and .headerNavVertical don't go away. Attempt to resolve using media query unsuccessful  
 
  // This is for the nav bar to change properties after scrolling past a certain point on the page
     $(function () {

@@ -711,13 +711,13 @@ footer p {
     }
 }
 
-/* This was my attempt in removing .headerNavVertical and .exitResponsive when switching back to a larger screen again while the hamburger dropdown is still open, but it doesn't seem to be working.*/
+/* Found a way to ensure headerNavVertical and exitResponsive disappear when the screen is expanded while hamburger dropdown is open, though this might not be the best way. Will have to learn more to gain better understanding of CSS + jQuery interaction to understand what better options there may be.*/
 @media (min-width: 811px) {
     .headerNavVertical {
-        display: none;
+        display: none !important;
     }
 
     .exitResponsive {
-        display: none;
+        display: none !important;
     }
 }
